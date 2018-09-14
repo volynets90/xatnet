@@ -1,0 +1,496 @@
+body {
+    /*position: relative;*/
+   background-color: rgb(63, 63, 63);
+    color: rgb(34, 34, 34);
+    overflow: scroll;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    font-family: 'Source Sans Pro', 'Roboto Condensed', Arial, Tahoma, sans-serif;
+    font-size: 1rem;
+    position: relative;
+}
+     /*    Loader       */
+#loaderArea {
+    background: #232526;
+    background: -webkit-linear-gradient(to right,  #202122, #343536); 
+    background: linear-gradient(to right, #202122, #343536); 
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1999;
+    transition: top 1s ease-out 0.5s;
+    opacity: 1;
+
+  }
+  .done{
+      visibility: hidden;
+    /*display: none;*/
+}
+  .loader {
+    width: 120px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -60px;
+    margin-top: -30px;
+    border-radius: 3px;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 rgba(173, 173, 173, 0.4);
+      box-shadow: 0 0 0 0 rgba(173, 173, 173, 0.4);
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(240, 240, 240, 0);
+        box-shadow:  0 0 0 10px rgba(240, 240, 240, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(126, 126, 126, 0);
+        box-shadow:  0 0 0 0 rgba(126, 126, 126, 0);
+    }
+  }
+   
+   /*                             Common styles                          */
+   .page-wrap {
+    background-color: rgb(63, 63, 63);
+    background-image: url(../img/plans-bg-v3.png);
+    background-repeat: repeat;
+    background-attachment:scroll;
+    margin-top: 60px;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.content-wrap{
+    background-color: #464646;
+    opacity: 0.9;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+/*----------------------------navigation bar----------------------------*/
+nav {
+    transition: all 200ms linear;
+}
+
+.navbar {
+    margin-bottom: auto;
+}
+.navbar-brand img{
+    width: 100px;
+}
+.active {
+    background-color: rgb(240, 156, 32);
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse {
+        background-color: rgb(53, 51, 51);
+    }
+}
+
+.nav-style {
+    color: white;
+    margin: 0;
+    background-color: rgb(53, 51, 51);
+}
+
+ul li a {
+    padding: 0px 10px;
+    margin: 0 10px;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto Condensed', Arial, Tahoma, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: all 200ms linear;
+}
+
+#li-home,
+#li-servicces,
+#li-contacts,
+#li-documents,
+#li-map,
+#li-account {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+#li-home:hover, #li-servicces:hover, #li-contacts:hover, #li-documents:hover, #li-map:hover, #li-account:hover {
+    background-color: rgb(221, 125, 46);
+}
+
+.dropdown-item{
+    width: 100%;
+    margin: 0;
+}
+.dropdown-item:hover{
+    background-color:rgb(221, 125, 46);
+    color: rgb(255, 255, 255);
+}
+
+/*----------------greeting page--------------------*/
+.main-page-header {
+    padding-top: auto;
+    background-image: url(../img/bg-main-v2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.underline {
+    font-family: 'Roboto Condensed', Arial, Tahoma, sans-serif;
+    display: inline-block;
+    border-bottom: 2px solid white;
+    padding-bottom: 11px;
+}
+
+.greeting {
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 30px rgb(71, 70, 70);
+}
+
+.about {
+    color: white;
+    text-shadow: 1px 1px 30px rgb(71, 70, 70);
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+/*---------------------------main page-------------------------*/
+#services{
+    width: 100%;
+    height: 100px;
+    margin: 0;   
+}
+main {
+    background-image: url(../img/background73.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    padding: 0 0 100px;   
+   
+}
+.services-h2{
+    color: #525252;
+    animation-duration: 1s;
+}
+@media (max-width: 991px) {
+    main {
+        height: auto;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    main {
+        margin-bottom: auto;
+    }
+
+    .callback-btn {
+        margin-top: 20px;
+    }
+
+    .callback-btn .btn {
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .callback-btn {
+        margin-top: 150px;
+    }
+}
+main h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+main h4 {
+    color: rgb(60, 59, 58);
+    padding-top: 10%;
+}
+
+.card {
+    border-radius: 2%;
+    border: 3px;
+    background: rgba(230, 118, 118, 0);
+}
+
+.card img {
+    width: 120px;
+    height: auto;
+    margin: auto;
+}
+.card img:hover{
+   
+    filter: drop-shadow(5px 5px 3px rgb(129, 129, 129)) saturate(1.5);
+}
+.card-deck {
+    margin: 5rem 0;
+    padding: 0;
+}
+
+.card-title {
+    color: rgb(60, 59, 58);
+}
+
+.card:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+.card a:hover {
+    text-decoration: none;
+}
+
+.callback-btn .btn {
+    background: rgb(235, 130, 51);
+    font-weight: 600;
+    color: rgb(238, 236, 236);
+    animation-duration: 1s;
+}
+
+.callback-btn .btn:hover {
+    background: rgb(211, 108, 30);
+}
+
+@media (max-width: 991px) {
+    .card {
+        margin-bottom: 50px;
+    }
+}
+
+/*---------------------------footer---------------------------*/
+footer {
+    background-color: rgb(53, 51, 51);
+    color: white;
+    padding: 15px 0 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+.logoBig {
+    height: 120px;
+}
+.contacts-header{
+    font-size: 2rem;
+}
+.copyright {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(53, 51, 51);
+    width: 100%;
+    color: white;
+}
+.address-list{
+    margin-left: -20px;
+}
+/*-------------- Plans page---------------*/
+
+.header-plans {
+    padding-top: 150px;
+}
+
+.section-plans-name{
+    color: #fff;
+    font-size:28px;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+.card-body{
+    padding: 10px 0 0;
+}
+.card-footer{
+    background:  rgb(95, 95, 95);
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.card-footer:hover{
+    background: rgb(221, 125, 46);
+}
+
+.card-header{
+    background: black;
+    border-bottom: none;
+    background-color: rgb(221, 125, 46);
+    color: rgb(255, 255, 255);
+    font-weight:600;
+}
+@media (max-width: 576px) {
+    .price-card {
+        width: 80%;
+    }
+}
+.price-card {
+    background: rgb(255, 255, 255);
+}
+.plan-price{
+    color:rgb(63, 63, 63);
+    font-size: 20px;
+    font-weight: 600;
+}
+.card-footer a{
+    font-size: 18px;
+}
+.section-plans {
+    margin-top: 50px;
+}
+
+.table-dark th, .table-dark thead th {
+    border-top: none;
+}
+
+.table-head-bg {
+    background-color: rgb(221, 125, 46);
+}
+
+.table-row-bg {
+    background-color: rgb(53, 51, 51);
+}
+
+.table-btn-order:hover {
+    background-color: rgb(221, 125, 46);
+}
+
+thead .table-head-bg.table-th-price {
+    padding-left: 50px;
+    margin-left: 80px;
+}
+
+.table-cell-price {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+th, td{
+    font-size: 18px;
+}
+@media (max-width: 767px) {
+    .section-plans {
+        height: 0;
+        overflow: hidden;
+    }
+    .addInfo{
+        margin: 0;
+        padding: 0 0 40px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-plans-sections {
+        height: 0;
+        overflow: hidden;
+    }
+}
+/*--------------------Video-system page---------------    */
+.vs-description{
+    color: white;
+    font-size: 18px;
+}
+.section-description{
+    padding-bottom: 150px;
+    padding-top: 60px;
+}
+.section-description img{
+    max-width: 100%;
+    margin-right: 30px;
+}
+/*      -----------DOCS -----------*/
+.section-docs{
+    padding-bottom: 150px;
+    padding-top: 60px;
+    font-size: 17px;
+}
+.docs-about-company{
+    color: #fff;
+    padding: 15px;
+}
+.section-docs img{
+    margin: 2px;
+}
+/*--------------------------Feedback form----------------*/
+.modal{
+    color:  rgb(60, 59, 58);
+}
+.btn-primary {
+    color: #fff;
+    background-color: rgb(221, 125, 46);
+    border: none;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: rgb(202, 101, 18);
+    border: none;
+}
+.btn .btn-secondary .ml-auto {
+    color: #fff;
+    background-color: #1c4b6b;
+    border: none;
+}
+.btn .btn-secondary:hover {
+    color: #fff;
+    background-color: #575a5e;
+    border: none;
+}
+#imageGallery{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.visible{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+.wrapThanks{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 333;
+    background: #575a5e;
+}
+#thanksWindow{
+position: absolute;
+top: 0;
+left: 50%;
+max-width:550px;
+height: auto;
+font-size: 25px;
+font-weight: bold;
+background: rgb(179, 98, 7);
+margin: 0;
+padding: 0;
+margin-left: auto;
+margin-right: auto;
+margin-top: 40vh;
+text-align: center;
+border-radius: 10px;
+opacity: 0.95;
+}
+.thanksWindow__text{
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    
+}
+
+/*      Map         */
+#map {
+    height: 600px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+   }

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>карта хат нет</name>
+    <description/>
+    <Style id="poly-E65100-2901-43-nodesc-normal">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>2.901</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>2b0051e6</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-E65100-2901-43-nodesc-highlight">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>4.3515</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>2b0051e6</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-E65100-2901-43-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-E65100-2901-43-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-E65100-2901-43-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-E65100-3601-64-nodesc-normal">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>3.601</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>400051e6</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-E65100-3601-64-nodesc-highlight">
+      <LineStyle>
+        <color>ff0051e6</color>
+        <width>5.4015</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>400051e6</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-E65100-3601-64-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-E65100-3601-64-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-E65100-3601-64-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Шар без назви</name>
+      <Placemark>
+        <name>Зона покриття</name>
+        <styleUrl>#poly-E65100-2901-43-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                29.9148917,50.0813377,0
+                29.913969,50.0804427,0
+                29.9142265,50.0802912,0
+                29.9138081,50.0796853,0
+                29.9134326,50.0796165,0
+                29.9130142,50.079224,0
+                29.9133897,50.0789831,0
+                29.9170375,50.0784047,0
+                29.9173379,50.0794375,0
+                29.9171662,50.0799263,0
+                29.9169195,50.0801535,0
+                29.9162543,50.0804874,0
+                29.9148917,50.0813377,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>Зона покриття</name>
+        <styleUrl>#poly-E65100-3601-64-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                29.9115551,50.0778746,0
+                29.9127138,50.0776749,0
+                29.9147308,50.0774064,0
+                29.9150634,50.0784529,0
+                29.9121666,50.0789349,0
+                29.9107718,50.0787834,0
+                29.9115551,50.0778746,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

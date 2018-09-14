@@ -1,0 +1,54 @@
+title = "Карта покриття"
+url = "/map"
+layout = "main"
+is_hidden = 0
+==
+<div class="page-wrap">
+<header class="d-flex flex-column justify-content-center text-center header-plans">
+    <div class="container">
+        <h1 class="greeting underline text-uppercase">Карта покриття</h1>
+    </div>
+</header>
+<section class="section-description">
+        
+    <div class="container">
+                <div class="content-wrap">
+                    <div id="map"></div>
+                    <script>
+                // Initialize and add the map
+                function initMap() {
+                  // The location of Uluru
+                  var uluru = {lat: 50.079782, lng: 29.915096};
+                 
+                  // The map, centered at Uluru
+                  var map = new google.maps.Map(
+                      document.getElementById('map'), {zoom: 17, center: uluru});
+                  // The marker, positioned at Uluru
+                  var mapIco='http://testxatnet.zzz.com.ua/themes/xatnet/assets/img/mapIco.png';
+                  var marker = new google.maps.Marker({position: uluru, 
+                    animation: google.maps.Animation.DROP,
+                    icon: mapIco,
+                    map: map});
+                    
+                    var srcKML = 'http://testxatnet.zzz.com.ua/themes/xatnet/assets/scripts/map3.kml';
+                            var ctaLayer = new google.maps.KmlLayer({
+                                url: srcKML,
+                                map: map
+                              });
+                }
+               
+        
+                 
+                    </script>
+                    <!--Load the API from the specified URL
+                    * The async attribute allows the browser to render the page while the API loads
+                    * The key parameter will contain your own API key (which is not needed for this tutorial)
+                    * The callback parameter executes the initMap() function
+                    -->
+                    <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb0GIW44aKJG3Tn7CMht1cC6DjEBSigIs&callback=initMap">
+                    </script>
+                </div>
+    </div>
+</section>
+</div>

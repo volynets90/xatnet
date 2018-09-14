@@ -1,0 +1,36 @@
+==
+<div class="modal fade" id="exampleModal" tabindex="-2" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ми з Вами зв'яжимося</h5>
+            </div>
+            <div class="modal-body">
+
+              <form id="send-form">
+                <div class="form-group">
+                  <label for="formInputName">Введіть Ваше ім'я:</label>
+                  <input type="text" name="usrName"  pattern="^[a-zA-Z-А-Яа-яЁё,а-яіїєґ,А-ЯІЇЄҐ][a-zA-Z-А-Яа-яЁё,а-яіїєґ,А-ЯІЇЄҐ\s]{2,40}$" class="form-control" id="formGroupExampleInput2" autofocus required placeholder="Ім'я">
+                </div>
+                <div class="form-group">
+                  <label for="forPhoneNumber">Введіть номер Вашого телефона:</label>
+                  <input type="tel" name="usrtel" pattern="(\+?\d[- .]*){10,13}" class="form-control" id="forPhoneNumber" aria-describedby="phoneNumb" required
+                    placeholder="+380...">
+                  <small id="emailHelp" class="form-text text-muted">Ми Вам обов'язково передзвонимо!</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Введіть повідомленя:</label>
+                  <textarea class="form-control inputMessage" maxlength="2000" name="message" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="g-recaptcha"  data-sitekey=""></div>
+                <div class="form-row mt-2">
+                  <button id="send-button"  name="submit" type="submit"   class="btn btn-primary">Відправити</button>
+                  <button type="button" class="btn btn-secondary ml-auto close-form" data-dismiss="modal">Закрити</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+   </div>

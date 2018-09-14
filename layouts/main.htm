@@ -1,0 +1,47 @@
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{this.page.title}}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+       
+    <link href="{{ [
+        'assets/css/bootstrap.min.css',
+        'assets/css/animate.css',
+        'assets/web-fonts-with-css/css/fontawesome-all.min.css',
+        'assets/css/fonts.css',
+        'assets/css/style.css'
+    ]|theme }}" rel="stylesheet">
+      {% styles %}
+    <script src="https://www.google.com/recaptcha/api.js" defer></script>
+  
+</head>
+
+<body   data-offset="0">
+<div id="loaderArea">
+        <img class="loader" src="{{'assets/img/preload.png'|theme}}" alt="loading">
+</div>
+    {% partial "navbar" %}
+    {%page%}
+  
+    <footer class="footer" id="foot">
+            {% partial "footer" %}
+    </footer>
+    
+    <script src="{{ ['assets/scripts/jquery-3.3.1.min.js',
+    'assets/scripts/popper.min.js',
+    'assets/scripts/bootstrap.min.js',
+    'assets/scripts/wow.min.js',
+    'assets/scripts/script.js',
+    'assets/scripts/form.js',
+    ]|theme }}"></script>
+     {% placeholder photoswipe %}
+     {% framework %}
+     {% scripts %}
+</body>
+
+</html>
