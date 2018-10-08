@@ -24,7 +24,7 @@ $("#navbarNav").on("click", "a", function (event) {
 });
 if ($('body').width() > 750) {
     new WOW().init();  
-};
+}
 
 $(function(){
     var DocumentTitle=document.title;
@@ -50,20 +50,24 @@ function insertTextToMessage(){
     let planName;
     let planSpeed;
     let planPrice;
-    document.querySelector(".section-plans").onclick=function(event){
-        var target=event.target;
-        var all_td = target.closest('tr');
-        var tdChild = all_td.childNodes;
-        
-        for (let i = 0; i < tdChild.length; i++) {
-            planName=tdChild[1].innerText;
-            planSpeed=tdChild[3].innerText;
-            planPrice=tdChild[5].innerText;
+    try {
+        document.querySelector(".section-plans").onclick=function(event){
+            var target=event.target;
+            var all_td = target.closest('tr');
+            var tdChild = all_td.childNodes;
+            
+            for (let i = 0; i < tdChild.length; i++) {
+                planName=tdChild[1].innerText;
+                planSpeed=tdChild[3].innerText;
+                planPrice=tdChild[5].innerText;
+            }
+            planPrice=planPrice.replace("Замовити", "");
+            textMessage.innerText = "Бажаю замовити тариф "+planName+
+                                    " зі швидкістю "+planSpeed +" МБіт/с "+ "вартістю "+ planPrice+"грн.";
+                                
         }
-        planPrice=planPrice.replace("Замовити", "");
-        textMessage.innerText = "Бажаю замовити тариф "+planName+
-                                " зі швидкістю "+planSpeed +" МБіт/с "+ "вартістю "+ planPrice+"грн.";
-                            
+    } catch (error) {
+        console.log("no data");
     }
 }
 insertTextToMessage();

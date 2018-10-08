@@ -252,6 +252,47 @@ main h4 {
 .card a:hover {
     text-decoration: none;
 }
+.h4_plans{
+    margin-bottom: 50px;
+}
+.h4_cvo{
+    margin-bottom: 20px;
+}
+.h4_it{
+    margin-bottom: 50px;
+}
+.h4_sysint{
+    margin-bottom: 50px;
+}
+@media (max-width: 1199px) {
+    .h4_sysint {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .h4_cvo {
+        margin-bottom: 50px;
+    }
+    .h4_sysint{
+        margin-bottom: 50px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .h4_cvo {
+        margin-bottom: 27px;
+    }
+    .h4_sysint{
+        margin-bottom: 48px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .h4_cvo {
+        margin-bottom: 50px;
+    }
+}
 
 .callback-btn .btn {
     background: rgb(235, 130, 51);
